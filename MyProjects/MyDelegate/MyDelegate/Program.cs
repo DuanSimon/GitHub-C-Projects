@@ -13,7 +13,10 @@ namespace MyDelegate
             GreetingClass.Greeting("小北", "中文");
             DelegateClass.GreetingHandler handlerChinese = new DelegateClass.GreetingHandler(GreetingClass.GreetingChinese);
             GreetingClass.Greeting("小美", handlerChinese);
-            
+
+            Action<string> act01 = name => Console.WriteLine("你好，{0}", name);
+            act01.Invoke("小甜甜");
+
             Console.ReadLine();           
         }
     }

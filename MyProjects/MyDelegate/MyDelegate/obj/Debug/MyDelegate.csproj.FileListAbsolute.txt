@@ -3,3 +3,8 @@ C:\Users\zgq\Desktop\文笔山中断数据恢复测试\MyProjects\MyDelegate\MyD
 C:\Users\zgq\Desktop\文笔山中断数据恢复测试\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.csprojResolveAssemblyReference.cache
 C:\Users\zgq\Desktop\文笔山中断数据恢复测试\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.exe
 C:\Users\zgq\Desktop\文笔山中断数据恢复测试\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.pdb
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.exe
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.pdb
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyDelegate\MyDelegate\bin\Debug\MyDelegate.exe
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyDelegate\MyDelegate\bin\Debug\MyDelegate.pdb
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyDelegate\MyDelegate\obj\Debug\MyDelegate.csprojResolveAssemblyReference.cache
