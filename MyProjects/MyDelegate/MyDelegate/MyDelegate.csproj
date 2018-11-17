@@ -37,8 +37,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatClass.cs" />
     <Compile Include="DelegateClass.cs" />
+    <Compile Include="DogClass.cs" />
     <Compile Include="GreetingClass.cs" />
+    <Compile Include="PersonClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
