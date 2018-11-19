@@ -30,12 +30,14 @@
         {
             this.btnSync = new System.Windows.Forms.Button();
             this.btnAsync = new System.Windows.Forms.Button();
+            this.btnAsyncAdvanced = new System.Windows.Forms.Button();
+            this.btnTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSync
             // 
             this.btnSync.Font = new System.Drawing.Font("宋体", 24F);
-            this.btnSync.Location = new System.Drawing.Point(27, 44);
+            this.btnSync.Location = new System.Drawing.Point(31, 19);
             this.btnSync.Name = "btnSync";
             this.btnSync.Size = new System.Drawing.Size(158, 43);
             this.btnSync.TabIndex = 0;
@@ -46,7 +48,7 @@
             // btnAsync
             // 
             this.btnAsync.Font = new System.Drawing.Font("宋体", 24F);
-            this.btnAsync.Location = new System.Drawing.Point(27, 122);
+            this.btnAsync.Location = new System.Drawing.Point(31, 80);
             this.btnAsync.Name = "btnAsync";
             this.btnAsync.Size = new System.Drawing.Size(158, 44);
             this.btnAsync.TabIndex = 1;
@@ -54,11 +56,34 @@
             this.btnAsync.UseVisualStyleBackColor = true;
             this.btnAsync.Click += new System.EventHandler(this.btnAsync_Click);
             // 
+            // btnAsyncAdvanced
+            // 
+            this.btnAsyncAdvanced.Font = new System.Drawing.Font("宋体", 24F);
+            this.btnAsyncAdvanced.Location = new System.Drawing.Point(31, 145);
+            this.btnAsyncAdvanced.Name = "btnAsyncAdvanced";
+            this.btnAsyncAdvanced.Size = new System.Drawing.Size(158, 48);
+            this.btnAsyncAdvanced.TabIndex = 2;
+            this.btnAsyncAdvanced.Text = "异步进阶";
+            this.btnAsyncAdvanced.UseVisualStyleBackColor = true;
+            this.btnAsyncAdvanced.Click += new System.EventHandler(this.btnAsyncAdvanced_Click);
+            // 
+            // btnTask
+            // 
+            this.btnTask.Font = new System.Drawing.Font("宋体", 24F);
+            this.btnTask.Location = new System.Drawing.Point(31, 210);
+            this.btnTask.Name = "btnTask";
+            this.btnTask.Size = new System.Drawing.Size(158, 48);
+            this.btnTask.TabIndex = 3;
+            this.btnTask.Text = "Task";
+            this.btnTask.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 218);
+            this.ClientSize = new System.Drawing.Size(217, 277);
+            this.Controls.Add(this.btnTask);
+            this.Controls.Add(this.btnAsyncAdvanced);
             this.Controls.Add(this.btnAsync);
             this.Controls.Add(this.btnSync);
             this.Name = "Form1";
@@ -71,6 +96,8 @@
 
         private System.Windows.Forms.Button btnSync;
         private System.Windows.Forms.Button btnAsync;
+        private System.Windows.Forms.Button btnAsyncAdvanced;
+        private System.Windows.Forms.Button btnTask;
     }
 }
 
