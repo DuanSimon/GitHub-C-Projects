@@ -6,3 +6,4 @@ F:\GitHub\GitHubRepository01-Simon\MyProjects\MyMultithreading\MyMultithreading\
 F:\GitHub\GitHubRepository01-Simon\MyProjects\MyMultithreading\MyMultithreading\obj\Debug\MyMultithreading.csproj.GenerateResource.Cache
 F:\GitHub\GitHubRepository01-Simon\MyProjects\MyMultithreading\MyMultithreading\obj\Debug\MyMultithreading.exe
 F:\GitHub\GitHubRepository01-Simon\MyProjects\MyMultithreading\MyMultithreading\obj\Debug\MyMultithreading.pdb
+F:\GitHub\GitHubRepository01-Simon\MyProjects\MyMultithreading\MyMultithreading\bin\Debug\MyMultithreading.exe.config

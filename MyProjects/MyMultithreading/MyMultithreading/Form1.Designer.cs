@@ -76,6 +76,7 @@
             this.btnTask.TabIndex = 3;
             this.btnTask.Text = "Task";
             this.btnTask.UseVisualStyleBackColor = true;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
             // Form1
             // 

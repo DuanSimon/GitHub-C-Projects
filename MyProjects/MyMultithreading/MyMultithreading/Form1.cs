@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MyMultithreading
 {
@@ -105,7 +106,58 @@ namespace MyMultithreading
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            //模拟项目开发过程
+            Console.WriteLine("***************************************************************************************************");
+            Console.WriteLine("SIMON接了一个项目");
+            Console.WriteLine("沟通需求，谈妥价格");
+            Console.WriteLine("收取50%费用");
+            Console.WriteLine("需求分析，方案设计");
 
+            List<Task> taskList = new List<Task>();
+            TaskFactory myTaskFactory = new TaskFactory();
+            Action act01 = new Action(() => Coding("小S", "Portal"));
+            Action act02 = new Action(() => Coding("小I", "Client"));
+            Action act03 = new Action(() => Coding("小M", "WeChat"));
+            Action act04 = new Action(() => Coding("小O", "BackOffice"));
+            Action act05 = new Action(() => Coding("小N", "Service"));
+
+            taskList.Add(myTaskFactory.StartNew(act01));
+            taskList.Add(myTaskFactory.StartNew(act02));
+            taskList.Add(myTaskFactory.StartNew(act03));
+            taskList.Add(myTaskFactory.StartNew(act04));
+            taskList.Add(myTaskFactory.StartNew(act05));
+
+            Action<Task[]> actAll = new Action<Task[]>(t => Console.WriteLine("所有子功能开发完成了，进行联调，当前线程ID={0}", Thread.CurrentThread.ManagedThreadId));
+            Task taskAll = myTaskFactory.ContinueWhenAll(taskList.ToArray(), actAll);
+            //等待某个子功能完成
+            Task.WaitAny(taskList.ToArray());               
+            Console.WriteLine("子功能测试");
+            Console.WriteLine("收取20%费用");
+            //等待所用代码编写完成
+            Task.WaitAll(new Task[]{ taskAll });
+            //taskList.Add(taskAll);
+            //Task.WaitAll(taskList.ToArray());
+            Console.WriteLine("验收，当前线程ID={0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("收取剩余20%费用，当前线程ID={0}", Thread.CurrentThread.ManagedThreadId);
+
+            Console.WriteLine("***************************************************************************************************");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
         private delegate void DoSomethingHandler(string name);
         private void DoSomething(string name)
         {
@@ -119,6 +171,11 @@ namespace MyMultithreading
             Console.WriteLine("{0} {1}结束执行，当前线程ID={2}, 计算结果={3}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"), name, Thread.CurrentThread.ManagedThreadId, lResult);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private delegate long DoSomethingLongHandler(string name);
         private long DoSomethingLong(string name)
         {
@@ -132,10 +189,25 @@ namespace MyMultithreading
             Console.WriteLine("{0} {1}结束执行，当前线程ID={2}, 计算结果={3}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"), name, Thread.CurrentThread.ManagedThreadId, lResult);
             return lResult;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="result"></param>
         public void CustomCallback(IAsyncResult result)
         {
             Console.WriteLine("执行callback函数，asyncState={0}", result.AsyncState);
+        }
+
+        private void Coding(string name, string project)
+        {
+            Console.WriteLine("{0} {1}开始执行{3}，当前线程ID={2}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"), name, Thread.CurrentThread.ManagedThreadId, project);
+            long lResult = 0;
+            for (long i = 0; i < 100000000; i++)
+            {
+                lResult += i;
+            }
+            Thread.Sleep(new Random().Next(2000,10000));
+            Console.WriteLine("{0} {1}结束执行{3}，当前线程ID={2}, 计算结果={4}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"), name, Thread.CurrentThread.ManagedThreadId, project, lResult);
         }
     }
 }
