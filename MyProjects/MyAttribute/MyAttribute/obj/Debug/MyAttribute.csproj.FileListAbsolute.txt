@@ -1,0 +1,6 @@
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\bin\Debug\MyAttribute.exe.config
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\obj\Debug\MyAttribute.csprojResolveAssemblyReference.cache
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\bin\Debug\MyAttribute.exe
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\bin\Debug\MyAttribute.pdb
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\obj\Debug\MyAttribute.exe
+E:\GitHub\GitHub-CSharp\MyProjects\MyAttribute\MyAttribute\obj\Debug\MyAttribute.pdb
